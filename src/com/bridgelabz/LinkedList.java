@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /**
- * Purpose - To create a Linked List and insert 30 between 56 and 70
- * Final sequence to be printed - 56 - 30 - 70
+ * Purpose - To delete the first element in the LinkedList
+ * Final sequence to be printed - 30 - 70
  * @author - Sakshi Shetty
  * @version - 16.0
  * @since - 2021-08-18
@@ -15,6 +15,9 @@ public class LinkedList {
         myLinkedList.append(myFirstNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.insertInMiddle(myFirstNode,mySecondNode);
+        myLinkedList.displayNode();
+        //To delete the first element in the sequence
+        myLinkedList.popFirstNode();
         myLinkedList.displayNode();
     }
 }
