@@ -31,7 +31,6 @@ public class MyLinkedList {
 
     /**
      * This method is used to append elements to the LinkedList
-     * @param newNode
      */
 
     public void append(INode newNode) {
@@ -48,8 +47,21 @@ public class MyLinkedList {
         }
     }
 
+    /**
+     * This method is used to insert elements in between two elements in the LinkedList
+     */
 
-        public void displayNode () {
+    public void insertInMiddle(MyNode myNode, MyNode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
+
+    /**
+     * This method is used to display the sequence
+     */
+
+    public void displayNode () {
             INode current = head;
 
             System.out.print("Nodes are: ");

@@ -1,6 +1,6 @@
 package com.bridgelabz;
 /**
- * Purpose - To create a Linked List and append elements to the linkedlist
+ * Purpose - To create a Linked List and insert 30 between 56 and 70
  * Final sequence to be printed - 56 - 30 - 70
  * @author - Sakshi Shetty
  * @version - 16.0
@@ -13,8 +13,8 @@ public class LinkedList {
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.append(myFirstNode);
-        myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
+        myLinkedList.insertInMiddle(myFirstNode,mySecondNode);
         myLinkedList.displayNode();
     }
 }
