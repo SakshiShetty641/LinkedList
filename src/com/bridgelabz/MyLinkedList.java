@@ -43,7 +43,6 @@ public class MyLinkedList {
         else {
             tail.setNext(newNode);
             tail=newNode;
-
         }
     }
 
@@ -68,12 +67,23 @@ public class MyLinkedList {
     }
 
     /**
+     * Method to delete last element in the LinkedList
+     */
+    public void popLastNode() {
+        INode tempNode = head;
+        while (tempNode.getNext() != tail) {
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(null);
+        tail = tempNode;
+    }
+
+    /**
      * This method is used to display the sequence
      */
     public void displayNode () {
-            INode current = head;
-
-            System.out.print("Nodes are: ");
+         INode current = head;
+         System.out.print("Nodes are: ");
             while (current != null) {
                 if (current.getNext() != null) {
                     System.out.print(current.getKey() + " - ");
@@ -83,7 +93,6 @@ public class MyLinkedList {
                     current = current.getNext();
                 }
             }
-
         }
     }
 
