@@ -19,6 +19,5 @@ public class LinkedList {
         myLinkedList.insertAtPosition(40, 2);
         myLinkedList.displayNode();
 
-
     }
 }
