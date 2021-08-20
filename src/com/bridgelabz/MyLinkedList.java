@@ -46,7 +46,7 @@ public class MyLinkedList {
         newNode.setNext(tempNode);
     }
 
-    /* Method to delete first node in LinkedList */
+    /* This Method to delete first node in LinkedList */
     public void popFirstNode() {
         if(head == null)
             System.out.println("Linked List is empty!");
@@ -54,7 +54,7 @@ public class MyLinkedList {
             head = head.getNext();
     }
 
-    /* Method to delete last element in the LinkedList */
+    /* This Method to delete last element in the LinkedList */
     public void popLastNode() {
         INode tempNode = head;
         while (tempNode.getNext() != tail) {
@@ -64,7 +64,7 @@ public class MyLinkedList {
         tail = tempNode;
     }
 
-    /* Method to get the position of a element. */
+    /* This Method to get the position of a element. */
     public void searchElement() {
         if (head == null)
             System.out.println("Linked List is empty");
@@ -80,6 +80,18 @@ public class MyLinkedList {
             }
         }
     }
+    /* This Method to insert a element at particular position.. */
+    public void insertAtPosition(int key, int position) {
+        MyNode newNode = new MyNode(key);
+        MyNode nodeAtPreviousIndex = (MyNode) head;
+        for (int i = 0; i < position - 1; i++) {
+            nodeAtPreviousIndex = (MyNode) nodeAtPreviousIndex.next;
+        }
+        newNode.next = nodeAtPreviousIndex.next;
+        nodeAtPreviousIndex.next = newNode;
+
+    }
+
 
     /* This method is used to display the sequence */
     public void displayNode () {

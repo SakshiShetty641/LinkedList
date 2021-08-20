@@ -16,7 +16,7 @@ public class LinkedList {
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.displayNode();
-        myLinkedList.insertAtPosition(40, 2);
+        myLinkedList.insertAtPosition(40, 1);
         myLinkedList.displayNode();
 
 
