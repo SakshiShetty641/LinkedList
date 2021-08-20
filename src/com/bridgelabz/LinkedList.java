@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /**
- * Purpose - To insert another element 40 after 30.
- * Final sequence to be printed - 56 - 30 - 40 - 70
+ * Purpose - To delete 40 from the Linked list
+ * Final sequence to be printed - 56 - 30 - 70
  * @author - Sakshi Shetty
  * @version - 16.0
  * @since - 2021-08-18
@@ -16,7 +16,11 @@ public class LinkedList {
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.displayNode();
+        //To insert 40
         myLinkedList.insertAtPosition(40, 2);
+        myLinkedList.displayNode();
+        // Deleting 40.
+        myLinkedList.deleteAtPosition(2);
         myLinkedList.displayNode();
 
     }
