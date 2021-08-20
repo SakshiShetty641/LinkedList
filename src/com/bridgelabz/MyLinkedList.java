@@ -1,8 +1,6 @@
 package com.bridgelabz;
 
-/**
- * Purpose - To create methods for Linked List operation.
- */
+/* Purpose - To create methods for Linked List operation. */
 public class MyLinkedList {
     public INode head;
     public INode tail;
@@ -12,9 +10,7 @@ public class MyLinkedList {
         this.tail = null;
     }
 
-    /**
-     * This method is used to add elements to the LinkedList
-     */
+    /*This method is used to add elements to the LinkedList */
     public void add(INode newNode) {
         if (this.tail == null) {
             this.tail = newNode;
@@ -29,11 +25,8 @@ public class MyLinkedList {
         }
     }
 
-    /**
-     * This method is used to append elements to the LinkedList
-     */
-
-    public void append(INode newNode) {
+    /* This method is used to append elements to the LinkedList */
+     public void append(INode newNode) {
         if (this.tail == null)
             this.tail = newNode;
 
@@ -46,19 +39,14 @@ public class MyLinkedList {
         }
     }
 
-    /**
-     * This method is used to insert elements in between two elements in the LinkedList
-     */
-
+    /* This method is used to insert elements in between two elements in the LinkedList */
     public void insertInMiddle(MyNode myNode, MyNode newNode) {
         INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
         newNode.setNext(tempNode);
     }
 
-    /**
-     *  Method to delete first node in LinkedList
-     */
+    /* Method to delete first node in LinkedList */
     public void popFirstNode() {
         if(head == null)
             System.out.println("Linked List is empty!");
@@ -66,9 +54,7 @@ public class MyLinkedList {
             head = head.getNext();
     }
 
-    /**
-     * Method to delete last element in the LinkedList
-     */
+    /* Method to delete last element in the LinkedList */
     public void popLastNode() {
         INode tempNode = head;
         while (tempNode.getNext() != tail) {
@@ -78,9 +64,24 @@ public class MyLinkedList {
         tail = tempNode;
     }
 
-    /**
-     * This method is used to display the sequence
-     */
+    /* Method to get the position of a element. */
+    public void searchElement() {
+        if (head == null)
+            System.out.println("Linked List is empty");
+        else {
+            INode tempNode = head;
+            int position = 0;
+            while (tempNode != null) {
+                position++;
+                if (tempNode.getKey().equals(30)) {
+                    System.out.println("Key value 30 is present at position " + position + " in list");
+                }
+                tempNode = tempNode.getNext();
+            }
+        }
+    }
+
+    /* This method is used to display the sequence */
     public void displayNode () {
          INode current = head;
          System.out.print("Nodes are: ");

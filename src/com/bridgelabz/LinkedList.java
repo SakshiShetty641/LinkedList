@@ -1,7 +1,6 @@
 package com.bridgelabz;
 /**
- * Purpose - To delete the last element in the LinkedList
- * Final sequence to be printed - 56 - 30
+ * Purpose - To search LinkedList to find Node with value 30
  * @author - Sakshi Shetty
  * @version - 16.0
  * @since - 2021-08-18
@@ -16,9 +15,8 @@ public class LinkedList {
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.displayNode();
-        //To delete the last element in the sequence
-        myLinkedList.popLastNode();
-        myLinkedList.displayNode();
+        // Getiing the position of element 30.
+        myLinkedList.searchElement();
 
     }
 }
